@@ -34,6 +34,9 @@ class Scorecard:
         """Return the average of all scores, 0 if no scores."""
         return sum(self.scores)/max(1,len(self.scores))
 
+    def __len__(self) -> int:
+        return len(self.scores)
+
 def print_scores(score_card: Scorecard) -> None:
     """Print statistics for the scorecard and the actual scores."""
 
